@@ -49,3 +49,26 @@ def step_impl(context, num1, num2):
 @then('the total should be {expected:d}')
 def step_impl(context, expected):
     assert context.result == expected
+
+
+"""
+
+output
+
+ behave features/calculator.feature
+USING RUNNER: behave.runner:Runner
+Feature: Basic Arithmetic # features/calculator.feature:2
+  As a student
+  I want to use a calculator
+  So that I can sum numbers correctly
+  Scenario: Add two numbers     # features/calculator.feature:7
+    Given I have a calculator   # features/steps/calc_steps.py:5 0.000s
+    When I enter 5 and 7        # features/steps/calc_steps.py:10 0.000s
+    Then the total should be 12 # features/steps/calc_steps.py:14 0.000s
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+3 steps passed, 0 failed, 0 skipped
+Took 0min 0.000s
+
+"""
