@@ -5,7 +5,7 @@ class Calculator:
         
     def add(self,x,y):
         self.result = x+y
-        retrn self.result
+        return self.result
 
 
         
